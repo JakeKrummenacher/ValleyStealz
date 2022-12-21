@@ -16,15 +16,14 @@
 	</video>
 
 	<nav>
-		<img src="https://i.ibb.co/ng4cSgp/White.png" class="logo">
+		<a href="/"><img src="https://i.ibb.co/ng4cSgp/White.png" class="logo"></a>
 		<ul>
-			<li><a href="">Home</a></li>
+			<li><a href="/">Home</a></li>
 			<!-- Implement For Each in Products -->
 			<!-- And Provide Links -->
-			<li><a href="">Products</a></li>
-			<li><a href="">Sale</a></li>
-			<li><a href="">Login</a></li>
-			<li><a href=""><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" style="width: 20px"/></a></li>
+			<li><a href="/products">Products</a></li>
+			<li><a href="/login">Login</a></li>
+			<li><a href="/cart"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" style="width: 20px"/></a></li>
 		</ul>
 	</nav>
 	<div class="content">

@@ -17,6 +17,11 @@ public class CartController {
     @Autowired
     UserService userService;
 
+    @GetMapping("/cart")
+    public String checkLogin() {
+        return "redirect:/cart/1";
+    }
+
     @GetMapping("/cart/{userId}")
     public String showCart(@PathVariable("userId") Long userId, Model model) {
         model.addAttribute("user", userService.findUser(userId));
