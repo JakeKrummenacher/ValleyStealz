@@ -17,23 +17,7 @@
 <body>
 	<h1>Sportswear Storefront</h1>
 	<div id="main">
-		<table class="table">
-			<thead>
-  				<tr>
-    				<th scope="col">Name</th>
-    				<th scope="col">Price</th>
 
-  				</tr>
-			</thead>
-			<tbody>
-  				<c:forEach var="fruit" items="${fruits}">    
-				<tr>
-  					<td><c:out value="${fruit.name}"></c:out></td>
-					<td><c:out value="${fruit.price}"></c:out></td>
-				</tr>
-				</c:forEach>
-			</tbody>
-		</table>
 	</div>
 </body>
 </html>
