@@ -1,0 +1,113 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Adding text which will be displayed in the center */
+.home{
+    width: 100%;
+    height: 100vh;
+    /* two color circle gradient */
+    position: relative;
+    padding: 0 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    background-image: radial-gradient(circle at top right, #ff8585, rgb(255, 152, 152), #a70699);
+    /* background-image: radial-gradient(circle at top right, #ffffff, rgb(126, 126, 126), #000000); */
+}
+
+
+/* NavBar */
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 150px;
+}
+
+/* For the whole list */
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+/* For the links */
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* For the text in the center of the video */
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/* To make the Center text hover */
+.content h1:hover{
+    -webkit-text-stroke: 4px rgb(197, 33, 156);
+    color: transparent;
+}
+
+.content a{
+    text-decoration: none;
+    display:  inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+
+}
+
+/* To position the video */
+.back-video{
+    position:absolute;
+	display: grid;
+    object-fit: contain;
+    align-items: center;
+    right: auto;
+    top:auto;
+    left:auto;
+    bottom: auto;
+    z-index: -1;
+}
+
+/* Aspect Ratio to keep the video consistent for any device */
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 60%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 60%;
+    }
+}

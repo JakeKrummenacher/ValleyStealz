@@ -1,6 +1,6 @@
 package com.grouptwelve.sportclothingsite.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -22,9 +22,9 @@ public class Cart {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
-
-    @OneToMany(mappedBy = "cart", fetch = FetchType.LAZY)
-    private List<Product> products;
+//
+//    @OneToMany(mappedBy = "cart", fetch = FetchType.LAZY)
+//    private List<UserProducts> userProducts;
 
 
     public Cart() {

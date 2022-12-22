@@ -69,6 +69,7 @@ nav ul li a{
 /* To make the Center text hover */
 .content h1:hover{
     -webkit-text-stroke: 4px rgb(197, 33, 156);
+    cursor: default;
     color: transparent;
 }
 

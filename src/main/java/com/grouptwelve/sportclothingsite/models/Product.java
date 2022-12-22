@@ -1,6 +1,6 @@
 package com.grouptwelve.sportclothingsite.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -24,9 +24,6 @@ public class Product {
 
     private Date updatedAt;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="cart_id")
-    private Cart cart;
 
 
     public Product() {

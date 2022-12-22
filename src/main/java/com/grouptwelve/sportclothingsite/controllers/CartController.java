@@ -24,7 +24,7 @@ public class CartController {
 
     @GetMapping("/cart/{userId}")
     public String showCart(@PathVariable("userId") Long userId, Model model) {
-        model.addAttribute("user", userService.findUser(userId));
+        model.addAttribute("user", userService.getOne(userId));
         return "showCart.jsp";
     }
 }
