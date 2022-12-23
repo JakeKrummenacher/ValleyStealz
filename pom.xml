@@ -8,12 +8,12 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.grouptwelve.sportclothingsite</groupId>
-	<artifactId>sportClothingSite</artifactId>
+	<groupId>com.grouptwelve.valleystealz</groupId>
+	<artifactId>valleyStealz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>sportClothingSite</name>
-	<description>Sports Clothing Website</description>
+	<name>valleyStealz</name>
+	<description>Valley Stealz Sportswear Site</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -89,7 +89,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${project.parent.version}</version>
 				<configuration>
 					<excludes>
 						<exclude>
