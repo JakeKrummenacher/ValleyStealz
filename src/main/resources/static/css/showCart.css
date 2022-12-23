@@ -107,3 +107,19 @@ nav ul li a{
         height: 60%;
     }
 }
+
+table {
+    border-collapse: collapse;
+    width: 45%;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.subtotal {
+    font-weight: bold;
+}

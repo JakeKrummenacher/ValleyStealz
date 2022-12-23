@@ -47,16 +47,17 @@
 					<div>
 						<form:label path="email">Email:</form:label>
 						<form:input type="text" path="email"/>
-						<form:errors path="email"/>
 					</div>
 					<div>
 						<form:label path="password">Password:</form:label>
 						<form:input type="password" path="password"/>
-						<form:errors path="password"/>
 					</div>
 					<input type="submit" value="Login" class="btn btn-primary"/>
-					<form:errors class="text-danger" path="email" />
-					<form:errors class="text-danger" path="password" />
+					<div class="validation-message">
+						<form:errors class="text-danger" path="email" />
+						<form:errors class="text-danger" path="password" />
+					</div>
+
 				</form:form>
 			</div>
 			<div class="form-container">

@@ -17,17 +17,18 @@ public class UserProduct {
     int quantity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="cart_id")
-    private Cart cart;
+    @JoinColumn(name="user_id")
+    private User user;
 
 
     public UserProduct() {
 
     }
 
-    public UserProduct(int productId, int quantity) {
+    public UserProduct(int productId, int quantity, User user) {
         this.productId = productId;
         this.quantity = quantity;
+        this.user = user;
     }
 
 }

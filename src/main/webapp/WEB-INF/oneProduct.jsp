@@ -41,7 +41,7 @@
   <img src="${product.imgSource}" alt="${product.name}">
   <h3>${product.name}</h3>
   <p>$${product.price}</p>
-  <button type="button" onclick="addToCart()">Add to Cart</button>
+  <button type="button" onclick="window.location='/cartadd/${product.id}'">Add to Cart</button>
 </div>
 
 <!-- Add to cart function -->

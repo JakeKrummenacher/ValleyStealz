@@ -7,6 +7,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 
 @Data
@@ -47,6 +48,9 @@ public class User {
     @NotEmpty(message="Confirm Password is Required")
     @Size(min=2,max=256,message="Confirm Password must be at least 6 Characters!")
     private String confirmPassword;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private List<UserProduct> userProducts;
 
 
     //	================== Data Creation Trackers ========================
