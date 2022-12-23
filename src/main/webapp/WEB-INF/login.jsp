@@ -13,67 +13,88 @@
 <head>
 	<meta charset="UTF-8">
     <title>Login and Register</title>
-    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<%--    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">--%>
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<%--    <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>--%>
         <!-- for Bootstrap CSS -->
-    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<%--    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />--%>
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+	<link rel="manifest" href="/images/site.webmanifest">
+	<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="stylesheet" href="/css/login.css" />
+	<link rel="stylesheet" href="/css/index.css" />
     
 
 </head>
 <body>
+	<nav>
+		<a href="/"><img src="https://i.ibb.co/ng4cSgp/White.png" class="logo"></a>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<!-- Implement For Each in Products -->
+			<!-- And Provide Links -->
+			<li><a href="/products">Products</a></li>
+		</ul>
+	</nav>
 	<div>
-		<div class="d-flex justify-content-evenly">
-			<div class="col-4 p-4 bg-dark text-light m-4">
-				<h2>New Customer</h2>
-				<form:form action="/register" method="post" modelAttribute="newUser" class="col-4 p-4 bg-dark text-light">
-					<div class="form-group">
-						<form:label path="firstName">First Name:</form:label>
-						<form:input type="text" path="firstName"/>
-						<form:errors path="firstName"/>
-					</div>
-					<div class="form-group">
-						<form:label path="lastName">Last Name:</form:label>
-						<form:input type="text" path="lastName"/>
-						<form:errors path="lastName"/>
-					</div>
-					<div class="form-group">
-						<form:label path="email">Email:</form:label>
-						<form:input type="text" path="email"/>
-						<form:errors path="email"/>
-					</div>
-					<div class="form-group">
-						<form:label path="password">Password:</form:label>
-						<form:input type="password" path="password"/>
-						<form:errors path="password"/>
-					</div>
-					<div class="form-group">
-						<form:label path="confirmPassword">Confirm Password:</form:label>
-						<form:input type="password" path="confirmPassword"/>
-						<form:errors path="confirmPassword"/>
-					</div>
-					<input type="submit" value="Register" class="btn btn-primary"/>	
-				</form:form>
-			</div>
-			<div class="col-4 p-4 bg-dark text-light m-4">
+		<div>
+			<div class="form-container">
 				<h2>Login</h2>
-				<form:form action="/login" method="post" modelAttribute="newLogin" class="col-4 p-4 bg-dark text-light">
-					<div class="form-group">
+				<form:form action="/login" method="post" modelAttribute="newLogin">
+					<div>
 						<form:label path="email">Email:</form:label>
 						<form:input type="text" path="email"/>
 						<form:errors path="email"/>
 					</div>
-					<div class="form-group">
+					<div>
 						<form:label path="password">Password:</form:label>
 						<form:input type="password" path="password"/>
 						<form:errors path="password"/>
 					</div>
 					<input type="submit" value="Login" class="btn btn-primary"/>
-					<form:errors class="text-danger" path="email" />	
-					<form:errors class="text-danger" path="password" />	
+					<form:errors class="text-danger" path="email" />
+					<form:errors class="text-danger" path="password" />
 				</form:form>
 			</div>
+			<div class="form-container">
+				<h2>New Customer</h2>
+				<form:form action="/register" method="post" modelAttribute="newUser">
+					<div>
+						<form:label path="firstName">First Name:</form:label>
+						<form:input type="text" path="firstName"/>
+					</div>
+					<div>
+						<form:label path="lastName">Last Name:</form:label>
+						<form:input type="text" path="lastName"/>
+					</div>
+					<div>
+						<form:label path="email">Email:</form:label>
+						<form:input type="text" path="email"/>
+					</div>
+					<div>
+						<form:label path="password">Password:</form:label>
+						<form:input type="password" path="password"/>
+					</div>
+					<div>
+						<form:label path="confirmPassword">Confirm Password:</form:label>
+						<form:input type="password" path="confirmPassword"/>
+					</div>
+					<input type="submit" value="Register"/>
+
+					<div class="validation-message">
+						<form:errors path="firstName" />
+						<form:errors path="lastName" />
+						<form:errors path="email" />
+						<form:errors path="password" />
+						<form:errors path="confirmPassword" />
+					</div>
+				</form:form>
+
+			</div>
+
 		</div>		
 	<h3 class="text-danger"><c:out value="${error}"/></h3>
 	</div>

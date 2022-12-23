@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valley Stealz</title>
     <link rel="stylesheet" href="/css/showCart.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
 
@@ -26,10 +27,6 @@
       <li><a href="/cart"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" style="width: 20px"/></a></li>
     </ul>
   </nav>
-  <div class="content">
-    <h1>Shop is Live!</h1>
-    <a href="">Explore</a>
-  </div>
 </div>
 </body>
 </html>
